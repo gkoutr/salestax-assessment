@@ -5,7 +5,7 @@ using System.Text;
 namespace SalesTaxes.Models
 {
     /// <summary>
-    /// Abstract class with a abstract property Tax. This will be defined in the subclasses
+    /// Abstract class with an abstract property Tax. This will be defined in the subclasses
     /// since taxes apply to different items.
     /// </summary>
     public abstract class Item
@@ -22,6 +22,10 @@ namespace SalesTaxes.Models
             }
         }
 
+        /// <param name="name"></param>
+        /// <param name="quantity"></param>
+        /// <param name="price"></param>
+        /// <param name="isImported"></param>
         protected Item(String name, int quantity, decimal price, bool isImported)
         {
             Name = name;

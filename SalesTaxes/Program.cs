@@ -2,6 +2,11 @@
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// This SalesTax program takes in user input in a certain format (ex: 1 Book at 12.49), then will calculate the tax for the items and output the
+/// items in a list with the total price and total taxes. This application uses a Factory pattern to determine which object to return 
+/// back to the client. The object is determined by the Name of the Item, since the name determines if it's imported, taxable or non taxable
+/// </summary>
 namespace SalesTaxes
 {
     class Program
