@@ -42,12 +42,13 @@ namespace SalesTaxes.Models
             }
 
             foreach (var item in _items)
-            {
+            { 
+                Console.WriteLine("");
                 bool HasMultipleItems = item.Quantity > 1;
-                Console.WriteLine("{0}: {1} ", item.Name, item.TotalPrice);
-                Console.Write(HasMultipleItems ? "({3} @ {4}" : "", item.Quantity, item.Price);
+                Console.Write("{0}: {1} ", item.Name, item.TotalPrice);
+                Console.Write(HasMultipleItems ? "({0} @ {1})" : "", item.Quantity, item.Price + (item.Tax / item.Quantity));
             }
-            
+            Console.WriteLine("");
             Console.WriteLine("Sales Taxes: {0}", TotalTaxes);
             Console.WriteLine("Total: {0}", TotalPrice);
         }
